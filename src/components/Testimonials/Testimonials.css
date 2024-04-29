@@ -1,0 +1,108 @@
+.testimonials {
+    margin: 80px auto;
+    padding: 0 80px;
+    position: relative;
+}
+
+.next-btn, .back-btn {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   padding: 15px;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   cursor: pointer;
+   background-color: #2b3be2;
+   z-index: 1; /* Ensure buttons appear above other elements */
+}
+
+.next-btn {
+   right: 0;
+}
+
+.back-btn {
+   left: 0;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    width: 200%; /* Ensure space for two slides */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 0; /* Remove default padding */
+   
+}
+
+.slider ul li {
+    list-style: none;
+    width: 50%; /* Each slide takes half of the container */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.slide {
+    box-shadow: 0 0 20px rgba(0,0,0,0.05); /* Corrected typo: rgba(0,0,0,0.05) */
+    padding: 40px;
+    border-radius: 20px;
+    color: #676767;
+    line-height: 1.4;
+    background: #e3e0e0;
+}
+
+.slide img {
+    width: 65px;
+    height: 65px; /* Ensure consistent height */
+    border-radius: 50%; /* Use 50% to make it a circle */
+    margin-right: 10px;
+    border: 1px solid #212EA0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.user-info h3 {
+    color: #212EA0;
+}
+
+
+
+
+/* media query */
+
+
+@media (max-width:800px){
+    .testimonials ul li {
+        padding: 10px;
+    }
+    .slide{
+        padding: 10px;
+    }
+    .slide img {
+        width: 50px;
+        border: 3px solid #212EA0;
+    }
+}
+
+
+@media (max-width:600px){
+    .user-info{
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    .user-info h3 {
+        font-size: 16px;
+    }
+    .slider p {
+        font-size: 12px;
+    }
+}
